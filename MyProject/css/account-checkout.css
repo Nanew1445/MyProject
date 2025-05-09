@@ -1,0 +1,232 @@
+/* Account Page Styles */
+.account-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  justify-content: center; /* เพิ่มบรรทัดนี้เพื่อให้อยู่ตรงกลาง */
+}
+
+.tab-btn {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  font-weight: 500;
+  color: var(--dark-gray);
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.tab-btn:hover {
+  color: var(--primary-color);
+}
+
+.tab-btn.active {
+  color: var(--primary-color);
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.account-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-card {
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.dashboard-card-content h3 {
+  margin-bottom: 0.3rem;
+}
+
+.dashboard-card-content p {
+  color: var(--dark-gray);
+  margin-bottom: 0;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Checkout Page Styles */
+.shipping-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.shipping-method {
+  display: flex;
+  align-items: center;
+}
+
+.shipping-method input[type="radio"] {
+  display: none;
+}
+
+.shipping-method label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.shipping-method input[type="radio"]:checked + label {
+  border-color: var(--primary-color);
+  background-color: rgba(57, 73, 171, 0.05);
+}
+
+.shipping-method-info {
+  flex: 1;
+}
+
+.shipping-method-title {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.shipping-method-description {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+.shipping-method-price {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.payment-details {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+}
+
+.promptpay-qr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.order-confirmation {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.order-success-icon {
+  font-size: 5rem;
+  color: var(--success-color);
+  margin-bottom: 1.5rem;
+}
+
+.order-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.view-order-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.view-order-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.required {
+  color: var(--error-color);
+}
+
+input.error {
+  border-color: var(--error-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .account-tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .order-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .shipping-method label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shipping-method-price {
+    margin-top: 0.5rem;
+  }
+}

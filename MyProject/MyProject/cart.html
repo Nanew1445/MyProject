@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตะกร้าสินค้า - Thai Silk</title>
+    <meta name="description" content="ตะกร้าสินค้าของคุณ - Thai Silk ผ้าไหมไทยคุณภาพดี">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>THAI SILK</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="products.html">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="account.html"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="ค้นหาผ้าไหม...">
+            <button id="close-search"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>ตะกร้าสินค้า</h1>
+            <div class="breadcrumb">
+                <a href="index.html">หน้าหลัก</a> / <span>ตะกร้าสินค้า</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <!-- JavaScript จะเติมข้อมูลสินค้าที่นี่ -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <h2>สรุปคำสั่งซื้อ</h2>
+                    <div class="summary-row">
+                        <span>ยอดรวม</span>
+                        <span id="cart-subtotal">฿0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>ส่วนลด</span>
+                        <span id="cart-discount">-฿0</span>
+                    </div>
+                    <div class="summary-row shipping">
+                        <span>ค่าจัดส่ง</span>
+                        <div class="shipping-options">
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="standard" checked>
+                                <span>จัดส่งมาตรฐาน (3-5 วัน)</span>
+                                <span class="shipping-price">฿100</span>
+                            </label>
+                            <label class="shipping-option">
+                                <input type="radio" name="shipping" value="express">
+                                <span>จัดส่งด่วน (1-2 วัน)</span>
+                                <span class="shipping-price">฿200</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="summary-row total">
+                        <span>ยอดรวมทั้งสิ้น</span>
+                        <span id="cart-total">฿0</span>
+                    </div>
+                    <div class="checkout-button">
+                        <button class="checkout-btn">ดำเนินการชำระเงิน</button>
+                    </div>
+                    <div class="payment-methods">
+                        <p>วิธีการชำระเงิน</p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-apple-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- You May Also Like -->
+            <div class="you-may-like">
+                <h2>คุณอาจสนใจ</h2>
+                <div class="products-slider">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=200" alt="ผ้าไหมยกดอกลายพุดตาน" class="lazy-load">
+                            <div class="product-overlay">
+                                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html?id=2">ผ้าไหมยกดอกลายพุดตาน</a></h3>
+                            <p class="price"><span class="original-price">฿3,800</span> ฿3,230</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=200" alt="ผ้าไหมลายน้ำไหล" class="lazy-load">
+                            <div class="product-overlay">
+                                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html?id=4">ผ้าไหมลายน้ำไหล</a></h3>
+                            <p class="price">฿2,800</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=200" alt="ผ้าไหมยกดอกทอง" class="lazy-load">
+                            <div class="product-overlay">
+                                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html?id=6">ผ้าไหมยกดอกทอง</a></h3>
+                            <p class="price">฿5,800</p>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="/placeholder.svg?height=200&width=200" alt="ผ้าไหมลายนาค" class="lazy-load">
+                            <div class="product-overlay">
+                                <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html?id=9">ผ้าไหมลายนาค</a></h3>
+                            <p class="price">฿3,500</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>THAI SILK</h3>
+                <p>ผ้าไหมไทยคุณภาพดี ทอด้วยมือ สืบสานภูมิปัญญาไทย</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>ลิงก์ด่วน</h3>
+                <ul>
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="products.html">สินค้า</a></li>
+                    <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ช่วยเหลือ</h3>
+                <ul>
+                    <li><a href="ordering-payment.html">การสั่งซื้อและชำระเงิน</a></li>
+                    <li><a href="shipping.html">การจัดส่ง</a></li>
+                    <li><a href="return-policy.html">นโยบายการคืนสินค้า</a></li>
+                    <li><a href="privacy-policy.html">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ติดต่อเรา</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท กรุงเทพฯ 10110</p>
+                <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@thaisilk.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Thai Silk. สงวนลิขสิทธิ์</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    
+</body>
+</html>

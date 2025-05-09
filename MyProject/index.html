@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Silk - ผ้าไหมไทยคุณภาพดี</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>THAI SILK</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html" class="active">หน้าหลัก</a></li>
+                <li><a href="products.html">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="account.html"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>อิสรภาพการสร้าง<br>ผ้าไหมไทยคุณภาพดี</h1>
+            <p>สร้างเว็บไซต์และขายผ้าไหมไทยคุณภาพดีได้อย่างไร้ขีดจำกัด เรามีผ้าไหมที่คุณต้องการ ตั้งแต่ผ้าไหมมัดหมี่ ผ้าไหมยกดอก และผ้าไหมลายต่างๆ</p>
+            <button class="cta-button">เริ่มเลย</button>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="products">
+        <div class="section-header">
+            <h2>ผ้าไหมแนะนำ</h2>
+            <p>ผ้าไหมไทยคุณภาพดีที่คัดสรรมาเพื่อคุณ</p>
+        </div>
+        <div class="product-grid">
+            <div class="product-card" data-id="1">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมมัดหมี่">
+                    <div class="product-overlay">
+                        <button class="add-to-cart" data-product="1" data-name="ผ้าไหมมัดหมี่" data-price="2500">เพิ่มลงตะกร้า</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>ผ้าไหมมัดหมี่</h3>
+                    <p class="price">฿2,500</p>
+                </div>
+            </div>
+            <div class="product-card" data-id="2">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมยกดอก">
+                    <div class="product-overlay">
+                        <button class="add-to-cart" data-product="2" data-name="ผ้าไหมยกดอก" data-price="3200">เพิ่มลงตะกร้า</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>ผ้าไหมยกดอก</h3>
+                    <p class="price">฿3,200</p>
+                </div>
+            </div>
+            <div class="product-card" data-id="3">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมลายน้ำไหล">
+                    <div class="product-overlay">
+                        <button class="add-to-cart" data-product="3" data-name="ผ้าไหมลายน้ำไหล" data-price="2800">เพิ่มลงตะกร้า</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>ผ้าไหมลายน้ำไหล</h3>
+                    <p class="price">฿2,800</p>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <button class="view-all-button">ดูทั้งหมด</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>เกี่ยวกับผ้าไหมไทย</h2>
+                <p>ผ้าไหมไทยเป็นมรดกทางวัฒนธรรมท��่มีประวัติศาสตร์อันยาวนาน ทอด้วยมือโดยช่างทอผ้าที่มีความชำนาญ ใช้เส้นไหมคุณภาพดีที่ผลิตในประเทศไทย</p>
+                <p>ผ้าไหมของเรามีความโดดเด่นด้วยลวดลายที่เป็นเอกลักษณ์ สีสันสดใส และคุณภาพที่ทนทาน เหมาะสำหรับการตัดเย็บเป็นชุดไทย ชุดพิธีการ หรือเครื่องแต่งกายในโอกาสพิเศษต่างๆ</p>
+                <button class="learn-more">เรียนรู้เพิ่มเติม</button>
+            </div>
+            <div class="about-image">
+                <img src="/placeholder.svg?height=400&width=600" alt="การทอผ้าไหมไทย">
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>THAI SILK</h3>
+                <p>ผ้าไหมไทยคุณภาพดี ทอด้วยมือ สืบสานภูมิปัญญาไทย</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>ลิงก์ด่วน</h3>
+                <ul>
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="products.html">สินค้า</a></li>
+                    <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ช่วยเหลือ</h3>
+                <ul>
+                    <li><a href="ordering-payment.html">การสั่งซื้อและชำระเงิน</a></li>
+                    <li><a href="shipping.html">การจัดส่ง</a></li>
+                    <li><a href="return-policy.html">นโยบายการคืนสินค้า</a></li>
+                    <li><a href="privacy-policy.html">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ติดต่อเรา</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท กรุงเทพฯ 10110</p>
+                <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@thaisilk.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Thai Silk. สงวนลิขสิทธิ์</p>
+        </div>
+    </footer>
+
+    <!-- Notification Container -->
+    <div class="notification-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

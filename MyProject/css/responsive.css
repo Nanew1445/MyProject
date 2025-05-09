@@ -1,0 +1,302 @@
+/* Responsive Styles for Thai Silk Website */
+
+/* Large Devices (Desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  .container {
+    max-width: 960px;
+  }
+
+  /* Products Grid */
+  .products-grid-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Product Detail */
+  .product-detail {
+    flex-direction: column;
+  }
+
+  .product-gallery,
+  .product-info {
+    width: 100%;
+  }
+
+  .product-info {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+
+  /* Blog */
+  .blog-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Medium Devices (Tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* Navigation */
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  /* Products Grid */
+  .products-grid-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Products Filter */
+  .products-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .product-filters {
+    margin-bottom: 2rem;
+  }
+
+  /* Cart */
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-items,
+  .cart-summary {
+    width: 100%;
+  }
+
+  .cart-summary {
+    margin-top: 2rem;
+  }
+
+  /* Blog */
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-sidebar {
+    margin-top: 3rem;
+  }
+
+  /* Contact */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form {
+    margin-top: 2rem;
+  }
+}
+
+/* Small Devices (Landscape Phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 540px;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Section Headers */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Products Grid */
+  .products-grid-view {
+    grid-template-columns: 1fr;
+  }
+
+  /* Product Detail */
+  .product-tabs .tabs-header {
+    flex-wrap: wrap;
+  }
+
+  .product-tabs .tab-btn {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Cart */
+  .cart-header {
+    display: none;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .cart-item > div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-col {
+    flex-direction: column;
+  }
+
+  .product-image {
+    margin-bottom: 1rem;
+  }
+
+  /* Testimonials */
+  .testimonial-slider {
+    flex-direction: column;
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+
+  /* เพิ่ม CSS สำหรับ pagination ในส่วนของ responsive */
+  .pagination {
+    flex-wrap: wrap; /* ให้ pagination สามารถขึ้นบรรทัดใหม่ได้ในหน้าจอเล็ก */
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices (Portrait Phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 3rem 5%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-form button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  /* Product Detail */
+  .product-actions {
+    flex-direction: column;
+  }
+
+  .quantity-selector {
+    margin-bottom: 1rem;
+  }
+
+  .add-to-cart-btn,
+  .wishlist-btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Blog */
+  .featured-post .post-content {
+    padding: 1rem;
+  }
+
+  .featured-post .post-title {
+    font-size: 1.5rem;
+  }
+
+  /* Contact */
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+
+  /* เพิ่ม CSS สำหรับ pagination ในส่วนของ responsive */
+  .pagination {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
