@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้าทั้งหมด - Thai Silk</title>
+    <meta name="description" content="ผ้าไหมไทยคุณภาพดี ทอมือโดยช่างฝีมือ มีให้เลือกหลากหลายลวดลาย">
+    <meta name="keywords" content="ผ้าไหมไทย, ผ้าไหมมัดหมี่, ผ้าไหมยกดอก, ผ้าไหมลายน้ำไหล, ผ้าไหมทอมือ">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>THAI SILK</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="products.html" class="active">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="account.html"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="ค้นหาผ้าไหม...">
+            <button id="close-search"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>สินค้าทั้งหมด</h1>
+            <div class="breadcrumb">
+                <a href="index.html">หน้าหลัก</a> / <span>สินค้า</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid-container">
+                <!-- Sidebar Filters -->
+                <div class="product-filters">
+                    <div class="filter-group">
+                        <h3>ประเภทผ้าไหม</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="mudmee"> ผ้าไหมมัดหมี่
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="yokdok"> ผ้าไหมยกดอก
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="praewa"> ผ้าไหมแพรวา
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="namlai"> ผ้าไหมลายน้ำไหล
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" name="category" value="plain"> ผ้าไหมพื้น
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>ราคา</h3>
+                        <div class="price-range">
+                            <input type="range" id="price-range" min="500" max="10000" step="100" value="10000">
+                            <div class="price-inputs">
+                                <input type="number" id="min-price" min="500" max="10000" value="500"> -
+                                <input type="number" id="max-price" min="500" max="10000" value="10000">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="filter-button">กรองสินค้า</button>
+                    <button class="reset-filter">รีเซ็ต</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <div class="products-header">
+                        <div class="products-count">แสดง <span id="product-count">12</span> จาก <span id="total-products">36</span> รายการ</div>
+                        <div class="products-sort">
+                            <label for="sort-by">เรียงตาม:</label>
+                            <select id="sort-by">
+                                <option value="popularity">ความนิยม</option>
+                                <option value="price-low">ราคา: ต่ำ - สูง</option>
+                                <option value="price-high">ราคา: สูง - ต่ำ</option>
+                                <option value="newest">สินค้าใหม่ล่าสุด</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-option active" data-view="grid"><i class="fas fa-th"></i></button>
+                            <button class="view-option" data-view="list"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="products-grid-view">
+                        <!-- Product Card 1 -->
+                        <div class="product-card" data-id="1" data-category="mudmee" data-price="2500" data-color="red,gold">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมมัดหมี่ลายดอกพิกุล" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="1">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมมัดหมี่ลายดอกพิกุล</a></h3>
+                                <p class="price">฿2,500</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมมัดหมี่ลายดอกพิกุลทอด้วยมือ สีสันสดใส เนื้อผ้านุ่มและเงางาม เหมาะสำหรับตัดชุดไทยหรือชุดผ้าไทย</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-card" data-id="2" data-category="yokdok" data-price="3800" data-color="gold,purple">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมยกดอกลายพุดตาน" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="2">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมยกดอกลายพุดตาน</a></h3>
+                                <p class="price">฿3,800</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมยกดอกลายพุดตาน ทอด้วยเทคนิคพิเศษ ลวดลายสวยงามประณีต เนื้อผ้าหนานุ่ม เหมาะสำหรับตัดชุดไทยในงานพิธีการสำคัญ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="product-card" data-id="3" data-category="praewa" data-price="4500" data-color="red,green,gold">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมแพรวา" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="3">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมแพรวา</a></h3>
+                                <p class="price">฿4,500</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมแพรวาจากจังหวัดกาฬสินธุ์ ทอด้วยมือโดยช่างทอผ้าที่มีประสบการณ์ ลวดลายโบราณที่สืบทอดมาหลายชั่วอายุคน</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="product-card" data-id="4" data-category="namlai" data-price="2800" data-color="blue,green">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมลายน้ำไหล" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="4">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมลายน้ำไหล</a></h3>
+                                <p class="price">฿2,800</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมลายน้ำไหลสีสันสวยงาม ทอด้วยเทคนิคพิเศษให้เกิดลวดลายคล้ายน้ำไหล เนื้อผ้านุ่มและมีความเงางาม</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="product-card" data-id="5" data-category="mudmee" data-price="3200" data-color="red,blue,purple">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมมัดหมี่ลายโบราณ" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="5">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมมัดหมี่ลายโบราณ</a></h3>
+                                <p class="price">฿3,200</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมมัดหมี่ลายโบราณที่หาชมได้ยาก ทอด้วยมือโดยช่างทอผู้เชี่ยวชาญ ลวดลายมีความหมายเชิงวัฒนธรรม</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="product-card" data-id="6" data-category="yokdok" data-price="5800" data-color="gold">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมยกดอกทอง" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="6">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมยกดอกทอง</a></h3>
+                                <p class="price">฿5,800</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมยกดอกทองสุดหรูหรา ทอด้วยเส้นไหมและเส้นทองแท้ เหมาะสำหรับตัดชุดในงานพิธีการสำคัญหรือเก็บเป็นสะสม</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 -->
+                        <div class="product-card" data-id="7" data-category="plain" data-price="1800" data-color="green,yellow">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมพื้นสีธรรมชาติ" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="7">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมพื้นสีธรรมชาติ</a></h3>
+                                <p class="price">฿1,800</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมพื้นย้อมสีธรรมชาติ 100% ปลอดภัยต่อผิวแม้ผู้ที่แพ้ง่าย สีสันนุ่มนวลและเป็นมิตรกับสิ่งแวดล้อม</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 -->
+                        <div class="product-card" data-id="8" data-category="mudmee" data-price="2700" data-color="blue,purple">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมมัดหมี่ลายขอ" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="8">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมมัดหมี่ลายขอ</a></h3>
+                                <p class="price">฿2,700</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมมัดหมี่ลายขอ เป็นลวดลายมงคลที่สื่อถึงความอุดมสมบูรณ์ ทอด้วยมือโดยช่างทอผ้าจากภาคอีสาน</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 9 -->
+                        <div class="product-card" data-id="9" data-category="namlai" data-price="3500" data-color="green,blue">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมลายนาค" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="9">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมลายนาค</a></h3>
+                                <p class="price">฿3,500</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมลายนาคที่มีความหมายมงคล ทอด้วยเทคนิคพิเศษให้ลวดลายนาคมีความโดดเด่น เนื้อผ้าหนานุ่ม</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 10 -->
+                        <div class="product-card" data-id="10" data-category="yokdok" data-price="3780" data-color="gold,yellow">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมยกดอกดาว" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="10">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมยกดอกดาว</a></h3>
+                                <p class="price"><span class="original-price">฿4,200</span> ฿3,780</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมยกดอกลายดาวสวยงาม ทอด้วยเทคนิคพิเศษให้ลวดลายดาวมีความโดดเด่น เหมาะสำหรับตัดชุดไทยในงานพิธีการ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 11 -->
+                        <div class="product-card" data-id="11" data-category="mudmee" data-price="2900" data-color="red,purple">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมมัดหมี่ลายประยุกต์" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="11">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมมัดหมี่ลายประยุกต์</a></h3>
+                                <p class="price">฿2,900</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมมัดหมี่ลายประยุกต์ที่ผสมผสานระหว่างลวดลายดั้งเดิมกับลวดลายสมัยใหม่ เหมาะสำหรับตัดเสื้อผ้าแฟชั่น</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 12 -->
+                        <div class="product-card" data-id="12" data-category="plain" data-price="1500" data-color="blue,green,red,yellow,purple">
+                            <div class="product-image">
+                                <img src="/placeholder.svg?height=300&width=300" alt="ผ้าไหมพื้นเรียบ" class="lazy-load">
+                                <div class="product-overlay">
+                                    <button class="add-to-cart" data-product="12">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3><a>ผ้าไหมพื้นเรียบ</a></h3>
+                                <p class="price">฿1,500</p>
+                                <div class="product-description">
+                                    <p>ผ้าไหมพื้นเรียบสีสวย เนื้อผ้านุ่มและเงางาม เหมาะสำหรับตัดเสื้อผ้าได้หลากหลายรูปแบบ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-nav prev" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button class="page-number active">1</button>
+                        <button class="page-number">2</button>
+                        <button class="page-number">3</button>
+                        <span class="page-dots">...</span>
+                        <button class="page-nav next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickview-modal">
+        <div class="modal-content">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="product-quickview">
+                <div class="product-gallery">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Product Image" id="quickview-image">
+                </div>
+                <div class="product-details">
+                    <h2 id="quickview-title">ชื่อสินค้า</h2>
+                    <div class="product-rating" id="quickview-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="rating-count">(4.0)</span>
+                    </div>
+                    <p class="price" id="quickview-price">฿0</p>
+                    <div class="product-description" id="quickview-description">
+                        <p>รายละเอียดสินค้า</p>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="99" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                    </div>
+                    <div class="product-meta">
+                        <p><strong>รหัสสินค้า:</strong> <span id="quickview-sku">SK-0001</span></p>
+                        <p><strong>หมวดหมู่:</strong> <span id="quickview-category">ผ้าไหมมัดหมี่</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>THAI SILK</h3>
+            <p>ผ้าไหมไทยคุณภาพดี ทอด้วยมือ สืบสานภูมิปัญญาไทย</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-line"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>ลิงก์ด่วน</h3>
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="products.html">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>ช่วยเหลือ</h3>
+            <ul>
+                <li><a href="ordering-payment.html">การสั่งซื้อและชำระเงิน</a></li>
+                <li><a href="shipping.html">การจัดส่ง</a></li>
+                <li><a href="return-policy.html">นโยบายการคืนสินค้า</a></li>
+                <li><a href="privacy-policy.html">นโยบายความเป็นส่วนตัว</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>ติดต่อเรา</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท กรุงเทพฯ 10110</p>
+            <p><i class="fas fa-phone"></i> 02-123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@thaisilk.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Thai Silk. สงวนลิขสิทธิ์</p>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
