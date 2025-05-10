@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา - Thai Silk</title>
+    <meta name="description" content="ติดต่อ Thai Silk เพื่อสอบถามข้อมูลเพิ่มเติมเกี่ยวกับผ้าไหมไทย">
+    <meta name="keywords" content="ติดต่อ, ผ้าไหมไทย, สอบถาม, ที่อยู่, เบอร์โทร">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>THAI SILK</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">หน้าหลัก</a></li>
+                <li><a href="products.html">สินค้า</a></li>
+                <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                <li><a href="contact.html" class="active">ติดต่อ</a></li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="account.html"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="ค้นหาผ้าไหม...">
+            <button id="close-search"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>ติดต่อเรา</h1>
+            <div class="breadcrumb">
+                <a href="index.html">หน้าหลัก</a> / <span>ติดต่อเรา</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>ข้อมูลการติดต่อ</h2>
+                    <p>หากคุณมีคำถามหรือต้องการข้อมูลเพิ่มเติมเกี่ยวกับผ้าไหมไทยของเรา สามารถติดต่อเราได้ตามช่องทางด้านล่างนี้</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>ที่อยู่</h3>
+                            <p>123 ถนนสุขุมวิท แขวงคลองตันเหนือ เขตวัฒนา กรุงเทพฯ 10110</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>โทรศัพท์</h3>
+                            <p>02-123-4567</p>
+                            <p>081-234-5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>อีเมล</h3>
+                            <p>info@thaisilk.com</p>
+                            <p>support@thaisilk.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>เวลาทำการ</h3>
+                            <p>จันทร์ - ศุกร์: 9:00 - 18:00 น.</p>
+                            <p>เสาร์ - อาทิตย์: 10:00 - 17:00 น.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-contact">
+                        <h3>ติดตามเรา</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-line"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>ส่งข้อความถึงเรา</h2>
+                    <p>กรอกแบบฟอร์มด้านล่างเพื่อส่งข้อความหรือคำถามถึงเรา เราจะติดต่อกลับโดยเร็วที่สุด</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="name" style="margin-bottom: 3px; display: block;">ชื่อ-นามสกุล *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="email" style="margin-bottom: 3px; display: block;">อีเมล *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="phone" style="margin-bottom: 3px; display: block;">เบอร์โทรศัพท์</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="subject" style="margin-bottom: 3px; display: block;">หัวข้อ *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 10px;">
+                            <label for="message" style="margin-bottom: 3px; display: block;">ข้อความ *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label class="checkbox-label" style="display: flex; align-items: center; gap: 10px;">
+                                <input type="checkbox" name="privacy" required style="margin: 0; width: 20px; height: 20px;">
+                                <span>ฉันยอมรับ <a href="privacy-policy.html">นโยบายความเป็นส่วนตัว</a> และยินยอมให้เก็บข้อมูลของฉัน</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" style="padding: 12px 30px; font-size: 16px; font-weight: 600; margin-top: 5px;">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2>แผนที่</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.1724863731196!2d104.50458341482977!3d14.927624289371142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3116c285176008cf%3A0x52ea586e94bb25a7!2z4LmC4Lij4LiH4LmA4Lij4Li14Lii4LiZ4LiZ4LmJ4Liz4LmA4LiB4Lil4Li14LmJ4Lii4LiH4Lin4Li04LiX4Lii4Liy!5e0!3m2!1sth!2sth!4v1714407731619!5m2!1sth!2sth" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>THAI SILK</h3>
+                <p>ผ้าไหมไทยคุณภาพดี ทอด้วยมือ สืบสานภูมิปัญญาไทย</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>ลิงก์ด่วน</h3>
+                <ul>
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="products.html">สินค้า</a></li>
+                    <li><a href="about.html">เกี่ยวกับเรา</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ช่วยเหลือ</h3>
+                <ul>
+                    <li><a href="#">การสั่งซื้อและชำระเงิน</a></li>
+                    <li><a href="#">การจัดส่ง</a></li>
+                    <li><a href="#">นโยบายการคืนสินค้า</a></li>
+                    <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ติดต่อเรา</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 ถนนสุขุมวิท กรุงเทพฯ 10110</p>
+                <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@thaisilk.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Thai Silk. สงวนลิขสิทธิ์</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

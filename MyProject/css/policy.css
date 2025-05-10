@@ -1,0 +1,109 @@
+/* Policy Page Styles */
+.policy-page {
+    padding: 3rem 0;
+  }
+  
+  .policy-content {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .policy-content h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .policy-content h2:first-child {
+    margin-top: 0;
+  }
+  
+  .policy-content h3 {
+    color: var(--secondary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+  
+  .policy-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .policy-content ul,
+  .policy-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .policy-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .policy-content ol li {
+    list-style-type: decimal;
+  }
+  
+  .policy-content ul li {
+    list-style-type: disc;
+  }
+  
+  .shipping-method-info {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .shipping-method-info h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .shipping-method-info ul {
+    margin-bottom: 1rem;
+  }
+  
+  .shipping-method-info p {
+    margin-bottom: 0;
+    font-style: italic;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .policy-content {
+      padding: 1.5rem;
+    }
+  
+    .policy-content h2 {
+      font-size: 1.6rem;
+    }
+  
+    .policy-content h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .policy-page {
+      padding: 2rem 0;
+    }
+  
+    .policy-content {
+      padding: 1rem;
+    }
+  
+    .policy-content h2 {
+      font-size: 1.4rem;
+    }
+  
+    .policy-content h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
